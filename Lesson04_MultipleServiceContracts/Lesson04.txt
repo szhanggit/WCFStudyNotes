@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=Pdz3cZKisWg
+
+Is it possible for a WCF service to implement multiple service contracts?
+Yes, we make the service class implement multiple service interfaces, and then expose each service using a different endpoint.
+
+Make a .Net library project and name it as CompanyService.
+Add a WCF Service and name it as CompanyService.
+
+Meta data (service behavior) is for customer to build application to consume the service.
