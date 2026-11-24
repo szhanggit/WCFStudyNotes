@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=qzyAxZaLBps&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=39
+
+=>	Does all bindings in WCF support sessions
+
+No, not all bindings support sessions. For example, basicHttpBinding does not 
+support session. If the binding does not support session, then the service behaves as a PerCall service.
+
+
+
+=>	How to control the WCF service session timeout
+
+The default session timeout is 10 minutes. If you want to increase or decrease the 
+default timeout value, set receiveTimeout attribute of the respective binding element.
+
+<bindings>
+  <netTcpBinding>
+	<binding name="netTCP" receiveTimeout="00：00：10"></binding>
+  </netTcpBinding>
+</bindings>
+
+<endpoint address="" binding="" bindingConfiguration="netTCP" contract="" />
+
+=>	What happens when the session timeout is reached.
+When the session timeout is reached, the connection to the wcf service is closed.
+As a result, the communication channel gets faulted and the client can no longer
+use the same proxy instance to communicate with the service. 
+This also means that along with the session, the data in the service object is also lost.
+
+
+=>	How to fix the communication channel is in a faulted state exception.
+1. Put the line that calls the service should in the try block
+2. Catch the communication Exceptoin
+3. Check if the communication channel is in a faulted state and create a new instance of the proxy class.
+
+try
+{
+	MessageBox.Show("Number = " + client.IncrementNumber().ToString());
+}
+catch(System.ServiceModel.CommunicationException)
+{
+	if(client.State == System.ServiceModel.CommunicationState.Faulted)
+	{
+		string strMessage = "Session timed out. Your existing session will be lost.";
+		strMessage += "A new session will now be created";
+		MessageBox.Show(strMessage);
+		client = new SimpleService.SimpleServiceClient();
+	}
+}
