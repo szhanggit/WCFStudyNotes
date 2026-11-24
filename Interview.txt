@@ -1,0 +1,70 @@
+
+
+https://www.c-sharpcorner.com/UploadFile/puranindia/wcf-interview-questions-and-answers/
+
+
+
+
+
+
+
+
+
+
+
+
+Question 8: What are Contracts in WCF? How many Contracts are in WCF?
+Service Contract: A service contract defines the operations which are exposed by the service to the outside world. such as the name of the service and namespace for the service.
+Operation Contract: An Operation Contract defines the method exposed to the client to exchange the information between the client and server. 
+Data Contract: Data Contracts define the data type for variables that are the same as get and set properties but the difference is that a Data Contract in WCF is used to serialize and deserialize the complex data.
+Message Contract: 
+Fault Contract: A fault contract defines errors raised by the service
+
+
+Question 9: What is Data Contract in WCF?
+Data contract can be explicit or implicit. Simple type such as int, string etc has an implicit data contract. 
+User defined object are explicit or Complex type, 
+for which you have to define a Data contract using [DataContract] and [DataMember] attribute.
+
+Question 10: What is Message Contract in WCF?
+A Message Contract is used to control the structure of a message body and serialization process. It is also used to send / access information in SOAP headers. 
+By default WCF takes care of creating SOAP messages according to service DataContracts and OperationContracts.
+
+
+
+
+Question 12: What is End Points and how many types of End points?
+An Endpoint is a piece of information that tells WCF how to build the runtime communication channels to send and receive messages. 
+An endpoint consists of the three things address, binding and contract.
+Endpoints provide clients access to the functionality offered by a WCF service.
+
+
+Binding: The binding specifies how to communicate with the endpoint. Protocol: 
+The transport protocol to use (for example, TCP or HTTP).
+The encoding to use for the messages (for example, text or binary).
+The necessary security requirements (for example, SSL or SOAP message security).
+
+
+Contracts: The contract outlines what functionality the endpoint exposes to the client. A contract specifies:
+What operations can be called by a client.
+The form of the message.
+The type of input parameters or data required to call the operation.
+What type of processing or response message the client can expect.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

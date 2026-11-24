@@ -1,0 +1,21 @@
+    [ServiceContract]
+    [ValidationBehavior]
+
+        [OperationContract]
+        [FaultContract(typeof(EvSystemException))]
+        [FaultContract(typeof(ValidationFault))]
+
+https://www.c-sharpcorner.com/UploadFile/0d4efc/fault-contract-in-wcf/
+
+https://factorycode.wordpress.com/2019/02/28/dependency-injection-in-wcf-service-using-autofac/
+https://github.com/autofac/Autofac.Wcf
+
+
+
+https://ovaismehboob.com/2012/11/11/using-enterprise-library-validation-application-block-in-wcf/	(how to use enterprise library in wcf)
+https://archive.codeplex.com/?p=entlib
+https://www.c-sharpcorner.com/UploadFile/dillipnayak/use-microsoft-enterpriselibrary-6-0/
+entlib.codeplex.com
+
+
+
