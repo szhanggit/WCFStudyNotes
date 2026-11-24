@@ -1,0 +1,22 @@
+https://www.youtube.com/watch?v=fXSjwBgRrto
+
+Use Microsoft Service Configuration Editor (Right click web.config on either server end or client end. Choose the third item 'Edit WCF Configuration')
+Or tools => WCF Service Configuration Editor
+
+On the upper left panel (Configuration), select Diagnostics =>  'Enable Log Auto Flush'  'Enable MessageLogging'  'Enable Tracing'
+Diagnostics => Message Logging => Set the first item 'LogEntireMessage' to be true.
+
+Open the log file by Windows SDK Tools => Service Trace viewer
+
+Pay attention!!!
+There might be some Chinese in web.config. Need to replace them all in English.
+
+
+    Off: Tracing is disabled and no trace will be generated.
+    Critical: Trace will be generated for unhandled exceptions.
+    Error: Trace will be generated for all exceptions.
+    Warning: Traces all possible problems that are occurred or possibility of occurring. Recommended for production environment with propagateActivity="true"
+    Information: Only for successful execution of milestones.
+    Verbose: Tracing more detail of successful execution. Recommended for debugging purpose.
+    ActivityTracing: Traces communication across components of entire application.
+    All: Traces everything which can be done by above trace levels.
