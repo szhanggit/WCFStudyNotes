@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=U68hgs12ZkM&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=23
+
+Self-hosting:	A WCF service can be self-hosted using a console application
+Windows Service:	Hosting using a windows service
+IIS		Hosting within IIS supports only HTTP bindings.
+Windows Activation Services (WAS)	Hosting a WCF service using IIS7 with WAS supports all of bindings including the Non-Http bindings.
