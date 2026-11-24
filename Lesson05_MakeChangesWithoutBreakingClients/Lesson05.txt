@@ -1,0 +1,23 @@
+https://www.youtube.com/watch?v=Qd2lHXLp1Bk&t=138s
+
+Use Name property of ServiceContractAttribute and give it an explicit name to prevent
+the clients from breaking when service contract interface name is changed.
+
+Later if we change the interface name from IHelloService to IHelloServiceChanged,
+this would break the existing clients consuming your WCF service. 
+In order to prevent this from happening, use Name property as shown below:
+
+[ServiceContract(Name="IHelloService")]
+public interface IHelloServiceChanged
+{
+	[OperationContract(Name="GetMessage")]
+	string GetMessageChanged(string name);
+}
+
+In WSDL document, we have something called portType. 
+You can think of this portType as the interface the client uses to communicate with the wcf service.
+When you do not set the Name property on a service contract attribute, by default the name of the portType xml element
+in WSDL will be the name of the service contract interface.
+
+If you set an explict Name for the service contract using Name property then that 
+Name will be used for the portType xml element.
