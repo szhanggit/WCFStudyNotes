@@ -1,0 +1,31 @@
+The client app doesn't accept self signed cert. any idea? (Windows 10 & VS2017)
+
+Selsigned Certificate
+https://www.youtube.com/watch?v=gmxoC7HkylE&list=PL6n9fhu94yhXQS_p1i-HLIftB9Y7Vnxlo&index=102&t=0s
+Enable Basic Authentication
+https://www.server-world.info/en/note?os=Windows_Server_2019&p=iis&f=8
+
+
+
+1. 	Go to the root of IIS. => Double click 'Server Certificates' => Click 'Create Self-Signed Certificate'
+2.  Select a specific site. Double click 'SSL Settings' => Check 'Require SSL', click 'Accept', and click Appply.
+3.	Double click 'Authentication' => Choose 'Basic Authentication'. => Enable it.
+4.	In the web.config on server side, 
+
+	<bindings>
+	  <wsHttpBinding>
+		<binding name="wsHttp">
+		  <security mode="Transport">
+			<transport clientCredentialType="Basic"></transport>
+		  </security>
+		</binding>
+	  </wsHttpBinding>
+	</bindings>  
+	<behaviors>
+      <serviceBehaviors>
+        <behavior name="mexBehavior">
+          <serviceMetadata httpsGetEnabled="true" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+	
