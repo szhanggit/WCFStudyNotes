@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af54c7b3-55c3-4231-9e95-302c8ca86e3c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://wcftestingsite.com:8082/HelloService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelloService.xsd" MetadataType="Schema" ID="bc42272b-7bbe-49ff-81a0-ee37e55d518e" SourceId="1" SourceUrl="http://wcftestingsite.com:8082/HelloService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HelloService1.wsdl" MetadataType="Wsdl" ID="7c0dca62-2ba9-44e7-adf0-564f3d0c8978" SourceId="1" SourceUrl="http://wcftestingsite.com:8082/HelloService.svc?wsdl" />
+    <MetadataFile FileName="HelloService1.xsd" MetadataType="Schema" ID="f3ae781a-bedf-47a3-846f-e2da1d7f6c54" SourceId="1" SourceUrl="http://wcftestingsite.com:8082/HelloService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

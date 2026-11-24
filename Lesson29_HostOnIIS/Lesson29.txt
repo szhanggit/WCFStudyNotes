@@ -1,0 +1,32 @@
+﻿https://www.youtube.com/watch?v=PBAs3zw6rq0&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=29
+
+To host a wcf service in IIS, create a file with .svc extension. This file contains ServiceHost directive. The Service attribute of ServiceHost directive, specifies which service this file points to. The service code can reside in
+1. The .svc file
+2. A separate assembly
+3. A file in App_Code folder
+
+Go to create a website.
+
+
+Right click solution -> New Web Site
+It is wcftestingsite
+Check if World Wide Web service is running.
+Browse index.html
+Make IIS directory browsing enabled.
+Check Application Pool -> wcftestingsite
+Browse http://localhost:8082/
+
+Set 127.0.0.1 wcftestingsite.com	in ‪C:\Windows\System32\drivers\etc\hosts
+http://wcftestingsite.com:8082/
+
+Add New Project => Add the existing website (Dead End)
+Add New Project => Add an empty windows app => Add Wcf service on the windows app => Delete IHelloService.cs
+=> Reference to HelloService project => 
+http://wcftestingsite.com:8082/HelloService.svc
+
+Need to adjust the web.config, especially <service behaviorConfiguration="mexBehavior" name="HelloServiceIISHost.HelloService">
+Use this address for the client end:
+http://wcftestingsite.com:8082/HelloService.svc?wsdl
+
+
+w3wp.exe

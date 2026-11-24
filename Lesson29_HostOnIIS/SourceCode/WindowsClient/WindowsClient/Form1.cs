@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsClient
+{
+    public partial class Form1 : Form
+    {
+        HelloService.HelloServiceClient client;
+
+        public Form1()
+        {
+            InitializeComponent();
+            client = new HelloService.HelloServiceClient();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (client.State == System.ServiceModel.CommunicationState.Faulted)//It is used to handle the case when connection is not healthy.
+                {
+                    client = new HelloService.HelloServiceClient();
+                }
+                    
+                label2.Text = client.GetMessage(textBox1.Text);
+            }
+            catch (Exception ex)
+            {
+                label2.Text = ex.Message;
+            }
+        }
+    }
+}
