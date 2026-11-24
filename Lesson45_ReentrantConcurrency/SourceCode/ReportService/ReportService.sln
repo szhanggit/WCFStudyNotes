@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService", "ReportService\ReportService.csproj", "{CA6D80E2-1D21-4E8F-A582-CDD8CD3E4F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{80D7DAA5-70FC-41BE-A3FA-A47ADF1E7478}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA6D80E2-1D21-4E8F-A582-CDD8CD3E4F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6D80E2-1D21-4E8F-A582-CDD8CD3E4F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6D80E2-1D21-4E8F-A582-CDD8CD3E4F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6D80E2-1D21-4E8F-A582-CDD8CD3E4F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D7DAA5-70FC-41BE-A3FA-A47ADF1E7478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D7DAA5-70FC-41BE-A3FA-A47ADF1E7478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D7DAA5-70FC-41BE-A3FA-A47ADF1E7478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D7DAA5-70FC-41BE-A3FA-A47ADF1E7478}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91CF246B-9477-44BF-B5BA-56AC896AC134}
+	EndGlobalSection
+EndGlobal
