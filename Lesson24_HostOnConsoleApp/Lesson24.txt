@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=ZdT5JiIoUCw&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=24
+
+Add a class library as HelloService.
+Add a Wcf service on HelloService.
+
+Add a consolee application to host the Wcf service.
