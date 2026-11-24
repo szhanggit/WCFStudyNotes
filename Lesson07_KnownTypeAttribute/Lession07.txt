@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=pQk7AZ6v3Hs&t=2s
+
+If we have classes related by inheritance, the wcf service generally accepts and returns the base type.
+If you expect the service to accept and return inherited types, then use KnownType attribute.
+
+Alter table tblEmployee Add EmployeeType int, AnnualSalary int, HourlyPay int, HoursWorked int
+
+Update service reference:
+Connected Services => EmployeeService => Right click and choose update.
