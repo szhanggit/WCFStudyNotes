@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=6ZyZum252Z4&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=33
+
+Are OneWay calls same as asynchronous calls?
+No, they are not. When a oneway call is received at the service, and if the service is busy serving other requests, then the call gets queued and the client is unblocked and can continue executing while the service processes the operation in the background. One-way calls can still block the client, if the number of messages waiting to be processed has exceeded the server queue limit. So, OneWay calls are not asynchronous calls, they just appear to be asynchronous.
