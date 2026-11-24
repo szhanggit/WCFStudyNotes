@@ -1,0 +1,33 @@
+https://www.youtube.com/watch?v=3Qt7TTS1u4A
+Java Web Application	(HTTP Protocal with XML Message Format)	Dot Net Web Service
+XML over HTTP offers interoperability
+
+Client Windows Application	(TCP Protocal with Binary Message Format)	Dot Net Remoting Service
+Binray over TCP offers better performance
+
+Use the template:
+ASP.NET Empty Web Application
+and call it as WebServicesDemo
+
+Add Web Service, and call it as HelloWebService.asmx.   (This is ASP.NET Web Services)
+View this web service in the browser, click "Get message", and try it.
+
+Also we can test it with .net web application.
+Use the template:
+ASP.NET Empty Web Application and call it as HelloWebClient.
+Right click Reference and add service reference.
+Automatically add service reference window open, and click discover button.
+Make the NameSpace as "HelloWebService".
+
+Build IHelloRemotingService
+Console Application and Windows Form Application needs system.runtime.remoting
+
+Can we use .NET Remoting to build a web service?
+yes.
+
+If the client is not built using .NET platform, will they be able to consumer a .NET Remoting web service?
+They can, but we need to be very careful in choosing the data types that we use in the service, and client-activated
+objects and events should be avoided. Keep in mind .NET Remoting is not meant for implementing interoperable services.
+If your goal is to build interoperable services, it is better to use ASP.NET Web Services.
+
+Compared with WCF, both .NET remoting and ASP.NET Web Services are legacy technologies.
