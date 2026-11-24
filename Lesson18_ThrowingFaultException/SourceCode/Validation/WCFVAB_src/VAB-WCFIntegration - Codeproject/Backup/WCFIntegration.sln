@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bursteg.Samples.WCFIntegration.ServiceContracts", "Bursteg.Samples.WCFIntegration.ServiceContracts\Bursteg.Samples.WCFIntegration.ServiceContracts.csproj", "{88BFAECB-833D-46FC-BBBE-79724A32686F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bursteg.Samples.WCFIntegration.Host", "Bursteg.Samples.WCFIntegration.Host\Bursteg.Samples.WCFIntegration.Host.csproj", "{47775178-186A-41E3-98B4-AD461FF95616}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bursteg.Samples.WCFIntegration.Services", "Bursteg.Samples.WCFIntegration.Services\Bursteg.Samples.WCFIntegration.Services.csproj", "{C13F141F-CB60-45EA-8D71-D9380B4CD203}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{4D2924D7-A457-4D65-929C-8DFE0D94001C}"
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{97E4E922-22B2-4643-9FFD-9303E4516B8A}"
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bursteg.Samples.WCFIntegration.Client", "Bursteg.Samples.WCFIntegration.Client\Bursteg.Samples.WCFIntegration.Client.csproj", "{AC2E1FAC-7511-49FD-A5B4-E6E33060005D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Referenced Enterprise Library Projects", "Referenced Enterprise Library Projects", "{93EAEAE7-FF80-4EF3-A741-959311F5B582}"
+	ProjectSection(FolderStartupServices) = postProject
+		{B4F97281-0DBD-4835-9ED8-7DFB966E87FF} = {B4F97281-0DBD-4835-9ED8-7DFB966E87FF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88BFAECB-833D-46FC-BBBE-79724A32686F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88BFAECB-833D-46FC-BBBE-79724A32686F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88BFAECB-833D-46FC-BBBE-79724A32686F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88BFAECB-833D-46FC-BBBE-79724A32686F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47775178-186A-41E3-98B4-AD461FF95616}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47775178-186A-41E3-98B4-AD461FF95616}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47775178-186A-41E3-98B4-AD461FF95616}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47775178-186A-41E3-98B4-AD461FF95616}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13F141F-CB60-45EA-8D71-D9380B4CD203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13F141F-CB60-45EA-8D71-D9380B4CD203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13F141F-CB60-45EA-8D71-D9380B4CD203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13F141F-CB60-45EA-8D71-D9380B4CD203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2E1FAC-7511-49FD-A5B4-E6E33060005D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2E1FAC-7511-49FD-A5B4-E6E33060005D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2E1FAC-7511-49FD-A5B4-E6E33060005D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2E1FAC-7511-49FD-A5B4-E6E33060005D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47775178-186A-41E3-98B4-AD461FF95616} = {4D2924D7-A457-4D65-929C-8DFE0D94001C}
+		{C13F141F-CB60-45EA-8D71-D9380B4CD203} = {4D2924D7-A457-4D65-929C-8DFE0D94001C}
+		{88BFAECB-833D-46FC-BBBE-79724A32686F} = {4D2924D7-A457-4D65-929C-8DFE0D94001C}
+		{AC2E1FAC-7511-49FD-A5B4-E6E33060005D} = {97E4E922-22B2-4643-9FFD-9303E4516B8A}
+	EndGlobalSection
+EndGlobal

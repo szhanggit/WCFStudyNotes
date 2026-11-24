@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceReference>
+	<ProxyGenerationParameters
+		ServiceReferenceUri="http://localhost:8080/OrdersService/Mex"
+		Name="ServicesProxy"
+		NotifyPropertyChange="False"
+		UseObservableCollection="False">
+	</ProxyGenerationParameters>
+	<EndPoints>
+		<EndPoint
+			Address="http://localhost:8080/OrdersService"
+			BindingConfiguration="BasicHttpBinding_IOrdersService"
+			Contract="Bursteg.Samples.WCFIntegration.Client.ServicesProxy.IOrdersService"
+			>
+		</EndPoint>
+	</EndPoints>
+</ServiceReference>

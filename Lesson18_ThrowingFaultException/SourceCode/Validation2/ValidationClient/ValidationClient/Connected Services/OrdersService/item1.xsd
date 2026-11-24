@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://bursteg.net/Samples/WCFIntegration/07/04" elementFormDefault="qualified" targetNamespace="http://bursteg.net/Samples/WCFIntegration/07/04" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CreateOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateOrderResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderWithParametersValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderWithParametersValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateOrderWithParametersValidationResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOrderWithDataContractValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orderData" nillable="true" type="tns:OrderData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="OrderData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderData" nillable="true" type="tns:OrderData" />
+  <xs:element name="CreateOrderWithDataContractValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateOrderWithDataContractValidationResult" nillable="true" type="tns:OrderInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="OrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+</xs:schema>
