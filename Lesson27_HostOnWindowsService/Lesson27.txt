@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=jnFj4AXn3Eo&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=27
+
+Add a windows service project based on lession25.
+
+C:\Windows\Microsoft.NET\Framework\v \InstallUtil.exe
+C:\Windows\Microsoft.NET\Framework64\v \InstallUtil.exe 
+
+open cmd with administrator
+cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+
+installutil C:\E\API\Wcf\WCFStudyNotes\Lesson27_HostOnWindowsService\SourceCode\HelloService\WindowsServiceHost\bin\Debug\WindowsServiceHost.exe	(for installing; pointing to .exe file)
+installutil /u WindowsServiceHost.exe	(for uninstalling; pointing to .exe file)
