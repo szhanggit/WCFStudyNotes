@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DownloadService", "DownloadService\", "{77ED079B-9EEA-42DC-92BE-9343DD4054DD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_7381"
+		Debug.AspNetCompiler.PhysicalPath = "DownloadService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7381\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_7381"
+		Release.AspNetCompiler.PhysicalPath = "DownloadService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7381\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7381"
+		SlnRelativePath = "DownloadService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77ED079B-9EEA-42DC-92BE-9343DD4054DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77ED079B-9EEA-42DC-92BE-9343DD4054DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77ED079B-9EEA-42DC-92BE-9343DD4054DD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{77ED079B-9EEA-42DC-92BE-9343DD4054DD}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED4C6D65-31A8-4296-B798-B4601C32C5AF}
+	EndGlobalSection
+EndGlobal

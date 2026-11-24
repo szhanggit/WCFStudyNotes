@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=DCWDrjaWQ5k&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=35
+
+Create a wcf service with hosting on IIS.
+Let .svc file to reference to a .net library project.
+like:
+<%@ ServiceHost Language="C#" Debug="true" Service="DownloadService.DownloadService" %>
