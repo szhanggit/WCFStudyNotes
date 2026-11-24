@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=Ls9-nxYr2EA&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=43
+
+Multiple threads executing the application code simultaneously is called as concurrency. 
+In general with concurrency we get better throughput. 
+However, concurrency issues can occur when multiple threads access the same resource. 
+In WCF, Service Instance is a shared resource. 
