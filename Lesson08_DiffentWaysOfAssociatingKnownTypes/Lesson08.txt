@@ -1,0 +1,32 @@
+https://www.youtube.com/watch?v=YiUx0iFI5p8
+
+Associating KnownTypes in WCF
+Option1: UseKnownType attribute on the base type.
+This option is global, that is all service contracts and all operation contracts will respect the known types.
+
+Option2: Apply ServiceKnownType attribute on the service contract. 
+With this option, the known types are respected by all of the operation contracts with in this service contract only.
+
+Option3: If you want even more granular control, then apply ServiceKnownType attribute on specific operation contracts.
+With this option, only the operation contracts that are decorated ith ServiceKnowType attribute respect known types.
+
+Option4: Specify known types in the configuration file. 
+This is equivalent to applying KnowType attribute on the base type, in the sense that it is applicalbe globally.
+All service contracts and operation contracts respect the known types.
+
+This block of config shall be parallel and under <system.serviceModel>
+<system.runtime.serialization>
+  <dataContractSerializer>
+    <declaredTypes>
+      <add type="EmployeeService.Employee, EmployeeService, Version=1.0.0.0, 
+            Culture=Neutral, PublicKeyToken=null">
+        <knownType type="EmployeeService.FullTimeEmployee, EmployeeService, 
+                    Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null"/>
+        <knownType type="EmployeeService.PartTimeEmployee, EmployeeService, 
+                    Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null"/>
+      </add>
+    </declaredTypes>
+  </dataContractSerializer>
+</system.runtime.serialization>
+
+Version can be checked at Properties => AssemblyInfo.cs => [assembly: AssemblyVersion("1.0.0.0")]
