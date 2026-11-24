@@ -1,0 +1,36 @@
+https://www.youtube.com/watch?v=1o_1trg2R04&t=749s
+
+Add new object on ProductService as: 	ADO.NET Entity Data Model
+				Wcf -> WCFProductService
+
+Make sure to compile the project.
+Move on App.Config on server end application, right click, click 'Edit Wcf configuration', click 'New service'.
+Go to bin -> Debug, choose 'ProductService.exe', 'ProductService.WCFProductService'.
+Click next to confirm the location of contract.
+Click next to choose http binding.
+Set address: http://localhost:8082/ProductService
+After click finish, go back to configuration page.
+Services -> ProductService.WCFProductService -> Endpoints -> (Empty Name) 
+set name as 'ProductServiceEndpoint'.
+File -> Save
+File -> Exit
+
+Move to App.Config on client end application, right click, click 'Edit Wcf configuration', click 'Create a new client'.
+Choose 'manual', click next.
+Go to c:\e\api\wcf\examples\products\ProductInterfaces\bin\Debug\ProductInterfaces.dll\ProductInterface.IWCFProductService to get contract.
+Next -> Choose Http -> http://localhost:8082/ProductService
+Next, Next, Finish.
+After click finish, go back to configuration page.
+Services -> ProductService.WCFProductService -> Endpoints -> (Empty Name) 
+set name as 'ProductServiceEndpoint'.
+File -> Save
+File -> Exit
+
+Go to client, 	add System.ServiceModel
+		add Interface reference.
+
+Multiple instance start running
+1. run visual studio as administrator
+2. right click solution, click property.
+
+metadata=res://*/Database.csdl|res://*/Database.ssdl|res://*/Database.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-LDKKTL6G\STEVENZSERVER;initial catalog=AdventureWorks;persist security info=True;user id=steven;MultipleActiveResultSets=True;App=EntityFramework&quot;

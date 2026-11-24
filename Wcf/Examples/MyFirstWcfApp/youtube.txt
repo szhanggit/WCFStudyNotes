@@ -1,0 +1,10 @@
+https://www.youtube.com/watch?v=dhUv2rMXh-o (Build a WCF Service Library as a host project)
+https://www.youtube.com/watch?v=PJqQDlbYQ04
+https://www.youtube.com/watch?v=m478yafVOac
+
+http://home.myfirstwcfapp.com:8080/MyFirstWcfApp.WcfService.svc	This is the Wcf service endpoint. Client can reach service by this.
+The link has to be filled in service too.
+
+Make sure that the iis can display basic html files.
+Make sure that the iis has been installed .net framework and wcf handlers.
+Make sure that end point address has been filled in the web.config on server side.

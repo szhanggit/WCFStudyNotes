@@ -1,0 +1,1 @@
+https://www.ecanarys.com/Blogs/ArticleID/111/How-to-implement-multiple-service-contract-in-a-single-WCF-service

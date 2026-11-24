@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=PBAs3zw6rq0
+Create WCF -> WCF Service Application
+delete the whole content of Web.config. Use App.config in MyFirstWcfApp to replace it.
+
+Modify the service name name and contract:
+      <service name="MyFirstWcfService.mywcfservice">
+        <endpoint address="" binding="basicHttpBinding" contract="MyFirstWcfService.IWcfService">
+
+Modify the service name in mywcfservice.svc

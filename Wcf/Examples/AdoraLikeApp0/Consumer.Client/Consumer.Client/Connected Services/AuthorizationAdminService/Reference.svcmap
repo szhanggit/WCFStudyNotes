@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d91ac4de-30fd-413e-a3e4-146baeb11fe1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/AuthorizationAdminService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthorizationAdminService.xsd" MetadataType="Schema" ID="45d90919-7669-4937-8a23-92739e572e34" SourceId="1" SourceUrl="http://localhost:8000/AuthorizationAdminService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthorizationAdminService.disco" MetadataType="Disco" ID="fc407b43-93e7-4bb0-9d0a-995a4c01bf3e" SourceId="1" SourceUrl="http://localhost:8000/AuthorizationAdminService.svc?disco" />
+    <MetadataFile FileName="AuthorizationAdminService.wsdl" MetadataType="Wsdl" ID="f4246c01-2ee9-4d67-9245-61e9178e0ed4" SourceId="1" SourceUrl="http://localhost:8000/AuthorizationAdminService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
