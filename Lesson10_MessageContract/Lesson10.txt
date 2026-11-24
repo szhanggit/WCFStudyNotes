@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=NXisxtStRNo&t=2s
+
+With Data Contracts we have very limited control over the SOAP XML request and response messages that are generated. 
+Use Message Contracts, 
+if you want to have full control over the generated XML SOAP messages.  
+
+Few examples of when Message Contracts can be handy
+1. Include some custom data in the SOAP header. In general SOAP headers are used to pass user credentials, license keys, session keys etc.
+
+2. Change the name of the wrapper element in the SOAP message or to remove it altogether.
+
+SOAP Request message that is generated without using message contracts. The header is empty.
+SOAP Request message that is generated with using message contracts. The header is not empty.
+
