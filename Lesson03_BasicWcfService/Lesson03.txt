@@ -1,0 +1,16 @@
+Build a library project,
+Add a WCF Service.
+
+System.ServiceModel is the core of WCF.
+The interface is a service contract.
+
+Now build a console application to be the wcf host.
+Add System.ServiceModel
+
+HelloService.HelloService
+namespace   class	
+
+endpoint needs to have address, binding, contract
+contrace is nothing but interface.
+
+Start the host and browse http://localhost:8080
