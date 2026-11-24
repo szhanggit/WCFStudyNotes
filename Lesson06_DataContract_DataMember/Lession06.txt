@@ -1,0 +1,127 @@
+https://www.youtube.com/watch?v=RPgTKzSGcKY
+
+WCF DataContract and DataMember
+The complex type can either be decorated with
+1. SerializableAttribute
+2. DataContractAttribute
+
+Create Table tblEmployee
+(
+	Id int,
+	[name] nvarchar(50),
+	Gender nvarchar(50),
+	DateOfBirth datetime
+)
+
+Insert into tblEmployee values (1, 'Mark', 'Male', '10/10/1980');
+Insert into tblEmployee values (2, 'Mary', 'Female', '11/10/1981');
+Insert into tblEmployee values (3, 'John', 'Male', '8/10/1979');
+
+Create procedure spGetEmployee
+@Id int
+as 
+Begin
+	select Id, Name, Gender, DateOfBirth from tblEmployee where Id = @Id
+End
+
+Create procedure spSaveEmployee
+@Id int,
+@Name nvarchar(50),
+@Gender nvarchar(50),
+@DateOfBirth DateTime
+as
+Begin
+	Insert into tblEmployee
+	values (@Id, @name, @Gender, @DateOfBirth);
+End
+
+It is the way to find proxy class.
+Client.EmployeeService.EmployeeServiceClient
+
+
+DataMember attributes: The Data Contract Serializer will serialize all public properties of your complex type in an alphabetical order.
+By default private field and properties are not serialized.
+
+If we decorate a complex type, with [Serializable] attribute, the
+DataContractSerializer serializes all of the fields. With [Serializable] attribute, we do not have explicit control on what fields to include and exclude in serialized data.
+
+If we decorate a complex type with [Datacontract] attribute, the 
+DataContractSerializer serializes the fields marked iwth the [DataMember] attribute.
+The field that are not marked with [DataMember] attribute are excluded from serialization.
+The [DataMember] attribute can be applied either on the private fields or public properties.
+
+In WCF, the most common way of serialization is to mark the type with the DataContract attribute and mark each member that needs to be serialized with the DataMember attribute.
+
+The way to check data contract:
+In the WSDL:
+
+<wsdl:types>
+<xsd:schema targetNamespace="http://tempuri.org/Imports">
+<xsd:import schemaLocation="http://localhost:8080/?xsd=xsd0" namespace="http://tempuri.org/"/>
+<xsd:import schemaLocation="http://localhost:8080/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+<xsd:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EmployeeService"/>
+</xsd:schema>
+</wsdl:types>
+
+http://localhost:8080/?xsd=xsd2
+This is the schema location for EmployeeService.
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/EmployeeService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EmployeeService">
+<xs:complexType name="Employee">
+<xs:sequence>
+<xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime"/>
+<xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+<xs:element minOccurs="0" name="Id" type="xs:int"/>
+<xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:element name="Employee" nillable="true" type="tns:Employee"/>
+</xs:schema>
+
+
+If you want to have explicit control on what fields and properties get serialized then use DataContract and DataMember attributes.
+1. Using DataContractAttribute, you can define an XML namespace for your data.
+2. Using DataMemberAttribute, you can 
+a. Define Name, Order, and whether if a property or field IsRequired.
+b. Also, serialize private fields and properties.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
